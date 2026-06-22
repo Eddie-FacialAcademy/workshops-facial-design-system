@@ -1,0 +1,105 @@
+{
+  "meta": { "brand": "workshops-facial", "lang": "pt-BR", "version": "1.0.0" },
+  "sections": {
+    "hero": {
+      "h1": "Pare de construir no escuro.",
+      "body": "O Design System dos **Workshops Facial**: tokens, tipografia Silka, componentes e acessibilidade prontos para você montar telas com consistência e parar de improvisar a cada tela nova. A decisão fica no token, não no achismo."
+    },
+    "marca": { "note": "A marca dos Workshops Facial no digital: logo, assinatura e uso correto sobre fundo claro e escuro. Mantém leitura e contraste nos dois temas." },
+    "cores": { "note": "Paleta institucional e seus derivados em tokens de tema, claro e escuro. O componente consome token, nunca cor fixa." },
+    "gradientes": { "note": "Gradientes da marca em malhas (mesh) e lineares. Sem cônico, sem blob, sem halo." },
+    "tipografia": { "note": "Silka em escala responsiva por breakpoint. Corpo com no mínimo 16px no mobile para evitar o zoom no iOS." },
+    "icones": { "note": "Biblioteca Phosphor, peso Thin, traço de 1pt, herdando a cor por currentColor. O ícone nunca substitui o rótulo." },
+    "botoes": { "note": "Variantes e tamanhos com altura mínima de 44px e raio pill. O rótulo sempre diz a ação (Garantir vaga, não Enviar)." },
+    "feedback": { "note": "Alerts, toasts e status nos quatro tons. Sempre ícone e texto juntos: a cor não comunica sozinha." },
+    "avancados": { "note": "Componentes de aplicação: data table, command palette, date picker e navegação. Conteúdo de exemplo do domínio de Harmonização Facial." },
+    "acessibilidade": { "note": "Contraste WCAG AA, foco visível, alvo de toque de 44px e respeito a movimento reduzido. A mensagem de erro diz o que houve e como resolver." },
+    "fundamentos": { "note": "Cores, tipografia, espaçamento e raio: a base que todo componente consome via token." },
+    "principios": { "note": "Consistência por token, paridade entre claro e escuro, acessibilidade por padrão. Decida uma vez, reaplique em todo lugar." },
+    "tokens": { "note": "Valores legíveis por máquina para tema, espaçamento, raio, elevação e movimento. O componente lê o token, não o valor solto." }
+  },
+  "microcopy": {
+    "buttons": {
+      "salvar": "Salvar protocolo",
+      "cancelar": "Cancelar",
+      "confirmar": "Confirmar",
+      "adicionar": "Adicionar turma",
+      "remover": "Remover",
+      "editar": "Editar protocolo",
+      "assinar": "Garantir vaga"
+    },
+    "empty_states": [
+      { "context": "lista de turmas vazia", "title": "Nenhuma turma ainda", "body": "Abra a primeira turma presencial de Harmonização Facial e defina as vagas.", "action": "Criar turma" },
+      { "context": "busca sem resultado", "title": "Sem resultados", "body": "Nenhuma turma corresponde a esse termo. Ajuste a busca ou limpe os filtros.", "action": "Limpar filtros" },
+      { "context": "área nova sem protocolos", "title": "Nenhum protocolo salvo", "body": "Monte seu primeiro protocolo de injeção e ele aparece aqui.", "action": "Novo protocolo" },
+      { "context": "favoritos vazios", "title": "Nada salvo ainda", "body": "Toque no marcador para guardar turmas e revisar antes da aula prática.", "action": "Explorar turmas" }
+    ],
+    "alerts": {
+      "success": { "title": "Vaga garantida", "body": "Sua inscrição na turma presencial está confirmada." },
+      "info": { "title": "Nova edição com inscrições abertas", "body": "Abriu uma turma do workshop de toxina. Garanta a vaga enquanto há lugar." },
+      "warning": { "title": "Últimas vagas na turma", "body": "Finalize a inscrição antes de continuar para não perder seu lugar na edição." },
+      "error": { "title": "Falha ao salvar", "body": "Não foi possível salvar agora. Verifique a conexão e tente de novo." }
+    },
+    "form_validation": {
+      "required": "Campo obrigatório. Preencha para continuar.",
+      "email": "E-mail inválido. Use o formato nome@dominio.com.",
+      "senha_fraca": "Senha fraca. Use ao menos 8 caracteres, com número e letra.",
+      "enviado": "Inscrição enviada. Você recebe a confirmação da vaga por e-mail.",
+      "erro_envio": "Não foi possível enviar. Verifique a conexão e tente de novo."
+    },
+    "confirm_destructive": {
+      "title": "Remover protocolo?",
+      "body": "Essa ação não tem volta. O protocolo sai dos seus salvos e não dá para recuperar.",
+      "confirm": "Remover",
+      "cancel": "Voltar"
+    },
+    "tooltips": [
+      "Duplica o protocolo para você editar sem perder o original.",
+      "Filtra as turmas por região da face e técnica de injeção.",
+      "Exporta o material da turma em PDF para revisar antes da aula prática."
+    ]
+  },
+  "components": {
+    "data_table": {
+      "columns": ["Turma", "Tema", "Carga", "Status"],
+      "rows": [
+        ["Toxina: princípios e diluição", "Toxina", "8 h", "Vagas abertas"],
+        ["Preenchimento labial seguro", "Lábios", "8 h", "Lista de espera"],
+        ["Anatomia do terço médio", "Anatomia", "6 h", "Vagas abertas"],
+        ["Rinomodelação: zonas de risco", "Rinomodelação", "6 h", "Esgotada"],
+        ["Manejo de intercorrência vascular", "Intercorrências", "4 h", "Vagas abertas"]
+      ],
+      "empty": "Nenhuma turma por aqui ainda. Abra a primeira edição presencial.",
+      "caption": "Turmas presenciais de Harmonização Facial"
+    },
+    "date_picker": {
+      "label": "Data da turma presencial",
+      "help": "Escolha a data da aula prática. As vagas por turma são limitadas."
+    },
+    "app_nav": {
+      "page_title": "Minhas turmas",
+      "user_initials": "AC",
+      "items": ["Início", "Turmas", "Edições", "Protocolos", "Comunidade", "Conta"]
+    },
+    "command_palette": {
+      "placeholder": "Busque turmas, protocolos ou comandos",
+      "groups": [
+        { "label": "Ações", "items": ["Criar protocolo", "Adicionar turma", "Exportar material da turma em PDF"] },
+        { "label": "Navegação", "items": ["Ir para Turmas", "Ir para Comunidade", "Abrir minha conta"] },
+        { "label": "Recentes", "items": ["Toxina: princípios e diluição", "Anatomia do terço médio"] }
+      ]
+    },
+    "tabs": ["Visão geral", "Turmas", "Protocolos", "Materiais"],
+    "accordion": [
+      { "q": "Com que frequência abrem turmas novas?", "a": "A cada edição entram novas turmas presenciais, organizadas por tema." },
+      { "q": "Os workshops têm certificado?", "a": "Cada turma presencial concluída emite certificado ao final. As edições são presenciais, com teoria e aula prática ao vivo." }
+    ],
+    "breadcrumb": ["Início", "Turmas", "Toxina"],
+    "cards": [
+      { "title": "Toxina botulínica", "desc": "Princípios, diluição e pontos de injeção por região da face." },
+      { "title": "Preenchimento", "desc": "Técnicas com agulha e cânula, do planejamento à finalização." },
+      { "title": "Anatomia aplicada", "desc": "Planos, vasos e zonas de risco para injetar com segurança." },
+      { "title": "Intercorrências", "desc": "Reconhecer, conduzir e documentar a intercorrência vascular." }
+    ]
+  }
+}

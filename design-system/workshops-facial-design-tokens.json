@@ -1,0 +1,383 @@
+{
+  "$meta": {
+    "name": "Workshops Facial Design System",
+    "version": "1.0.0",
+    "author": "Edegar Junior",
+    "source": "Identidade visual da marca Workshops Facial (derivada do Facial Academy)",
+    "language": "pt-BR",
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "defaultTheme": "dark",
+    "note": "Vívido lidera (violeta #9521FF + magenta), Facial = apoio. Aplique tokens, nunca hex solto."
+  },
+  "breakpoints": {
+    "desktop": 1200,
+    "tablet": 810,
+    "phone": 390
+  },
+  "color": {
+    "brand": {
+      "roxo": "#9521FF",
+      "lilas": "#A289D7",
+      "amarelo": "#FFE4A4",
+      "vermelho": "#FFB1BD",
+      "amarelado": "#FFCA9B",
+      "branco": "#FFFFFF",
+      "preto": "#000000",
+      "magenta": "#C879FF",
+      "roxoApoio": "#644389"
+    },
+    "dark": {
+      "bg": "#0A070E",
+      "bg2": "#130D1A",
+      "card": "#1B1225",
+      "card2": "#22172F",
+      "line": "rgba(149,33,255,.16)",
+      "roxo": "#321953",
+      "roxo2": "#7A1AD6",
+      "roxoBright": "#9521FF",
+      "lilas": "#C286FF",
+      "lilasSoft": "#D4B3FF",
+      "cta": "#8A1AE6",
+      "ctaGrad": "linear-gradient(120deg,#9521FF,#7A1AD6)",
+      "ctaInk": "#fff",
+      "txt": "#F9F8FD",
+      "mut": "#C2BAD0",
+      "legalMut": "#826DAD",
+      "gold": "#FFE4A4",
+      "goldDeep": "#D6C08A",
+      "goldInk": "#FFE4A4",
+      "goldLine": "rgba(255,228,164,.42)",
+      "rose": "#FFB1BD",
+      "roseInk": "#FFB1BD",
+      "roseLine": "rgba(255,177,189,.42)",
+      "peach": "#FFCA9B",
+      "logo": "#FFFFFF",
+      "success": "#45C08A",
+      "warning": "#E8B53D",
+      "danger": "#FF7D93",
+      "info": "#A289D7",
+      "successBg": "rgba(69,192,138,.14)",
+      "warningBg": "rgba(232,181,61,.14)",
+      "dangerBg": "rgba(255,125,147,.14)",
+      "infoBg": "rgba(162,137,215,.14)",
+      "rowSel": "rgba(162,137,215,.16)",
+      "shadow": "rgba(149,33,255,.40)",
+      "shadowStrong": "rgba(149,33,255,.50)",
+      "magenta": "#FB87FF"
+    },
+    "light": {
+      "bg": "#FAFAFA",
+      "bg2": "#F5F1FB",
+      "card": "#FAF7FE",
+      "card2": "#F1EAFA",
+      "line": "rgba(106,18,200,.18)",
+      "roxo": "#321953",
+      "roxo2": "#7A1AD6",
+      "roxoBright": "#6A12C0",
+      "lilas": "#7A1AD6",
+      "lilasSoft": "#8A3DE0",
+      "cta": "#7A1AD6",
+      "ctaGrad": "linear-gradient(120deg,#7A1AD6,#5E12A8)",
+      "ctaInk": "#fff",
+      "txt": "#241733",
+      "mut": "#6B5C87",
+      "legalMut": "#6B5C87",
+      "gold": "#FFE4A4",
+      "goldDeep": "#D6C08A",
+      "goldInk": "#7A5A0E",
+      "goldLine": "rgba(122,90,14,.55)",
+      "rose": "#FFB1BD",
+      "roseInk": "#B04A5E",
+      "roseLine": "rgba(176,74,94,.50)",
+      "peach": "#FFCA9B",
+      "logo": "#241733",
+      "success": "#147A45",
+      "warning": "#8A5A00",
+      "danger": "#BE2C45",
+      "info": "#5E4A8C",
+      "successBg": "rgba(31,138,91,.10)",
+      "warningBg": "rgba(138,90,0,.10)",
+      "dangerBg": "rgba(199,47,73,.10)",
+      "infoBg": "rgba(94,74,140,.10)",
+      "rowSel": "rgba(100,67,137,.10)",
+      "shadow": "rgba(122,26,214,.18)",
+      "shadowStrong": "rgba(122,26,214,.26)",
+      "magenta": "#C13DE0",
+      "magentaInk": "#A21CC9"
+    }
+  },
+  "elevation": {
+    "roles": {
+      "raised": "1",
+      "overlay": "3",
+      "modal": "4"
+    },
+    "dark": {
+      "1": "0 1px 2px rgba(0,0,0,.34), 0 2px 6px rgba(0,0,0,.30)",
+      "2": "0 2px 4px rgba(0,0,0,.34), 0 8px 18px rgba(0,0,0,.40)",
+      "3": "0 4px 12px rgba(0,0,0,.45), 0 16px 36px rgba(0,0,0,.55)",
+      "4": "0 10px 24px rgba(0,0,0,.5), 0 28px 64px rgba(0,0,0,.62)"
+    },
+    "light": {
+      "1": "0 1px 2px rgba(100,67,137,.10), 0 2px 6px rgba(100,67,137,.08)",
+      "2": "0 2px 4px rgba(100,67,137,.10), 0 8px 16px rgba(100,67,137,.12)",
+      "3": "0 4px 10px rgba(100,67,137,.12), 0 16px 32px rgba(100,67,137,.16)",
+      "4": "0 8px 18px rgba(100,67,137,.14), 0 28px 56px rgba(100,67,137,.22)"
+    }
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "14px",
+    "lg": "18px",
+    "pill": "30px"
+  },
+  "foundations": {
+    "opacity": {
+      "disabled": 0.45,
+      "muted": 0.66,
+      "hover": 0.08,
+      "overlay": 0.58
+    },
+    "borderWidth": {
+      "1": "1px",
+      "2": "2px",
+      "hair": "1px"
+    },
+    "blur": {
+      "sm": "6px",
+      "md": "12px",
+      "lg": "20px"
+    },
+    "breakpoint": {
+      "phone": "390px",
+      "tablet": "810px",
+      "desktop": "1200px"
+    },
+    "size": {
+      "iconSm": "16px",
+      "icon": "20px",
+      "iconLg": "24px",
+      "controlH": "44px",
+      "touchMin": "44px",
+      "rowH": "46px",
+      "rowHCompact": "38px",
+      "sideW": "248px",
+      "calCell": "38px"
+    },
+    "aspectRatio": {
+      "square": "1/1",
+      "photo": "4/3",
+      "wide": "16/9"
+    }
+  },
+  "space": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "6": "24px",
+    "8": "32px",
+    "12": "48px"
+  },
+  "zIndex": {
+    "base": 0,
+    "raised": 10,
+    "sticky": 40,
+    "overlay": 100,
+    "toast": 1000
+  },
+  "motion": {
+    "fast": "0.15s",
+    "base": "0.2s",
+    "slow": "0.4s",
+    "ease": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "focus": "0 0 0 3px rgba(162,137,215,.55)",
+  "typography": {
+    "fontFamily": "'Silka', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weights": [
+      300,
+      400,
+      500,
+      600,
+      700
+    ],
+    "note": "size = [desktop, tablet, phone] (px). No CSS use clamp() entre o phone e o desktop. Body mínimo 16px no mobile (evita zoom no iOS).",
+    "styles": {
+      "Display/H1": {
+        "size": [
+          60,
+          44,
+          34
+        ],
+        "weight": 500,
+        "lineHeight": 1.03,
+        "letterSpacing": "-0.025em"
+      },
+      "Heading/H2": {
+        "size": [
+          38,
+          32,
+          26
+        ],
+        "weight": 500,
+        "lineHeight": 1.12,
+        "letterSpacing": "-0.02em"
+      },
+      "Sub/H3": {
+        "size": [
+          24,
+          22,
+          20
+        ],
+        "weight": 500,
+        "lineHeight": 1.2
+      },
+      "Sub/H4": {
+        "size": [
+          20,
+          19,
+          18
+        ],
+        "weight": 500,
+        "lineHeight": 1.25,
+        "letterSpacing": "-0.01em"
+      },
+      "Sub/H5": {
+        "size": [
+          17,
+          16,
+          16
+        ],
+        "weight": 500,
+        "lineHeight": 1.3
+      },
+      "Sub/H6": {
+        "size": [
+          15,
+          14,
+          14
+        ],
+        "weight": 500,
+        "lineHeight": 1.35
+      },
+      "Eyebrow": {
+        "size": [
+          12,
+          12,
+          11
+        ],
+        "weight": 600,
+        "lineHeight": 1.2,
+        "letterSpacing": "0.18em",
+        "uppercase": true,
+        "color": "lilas"
+      },
+      "Lead": {
+        "size": [
+          18,
+          17,
+          16
+        ],
+        "weight": 300,
+        "lineHeight": 1.5,
+        "color": "mut"
+      },
+      "Body": {
+        "size": [
+          16,
+          16,
+          16
+        ],
+        "weight": 300,
+        "lineHeight": 1.65
+      },
+      "BodySmall": {
+        "size": [
+          14,
+          13,
+          13
+        ],
+        "weight": 300,
+        "lineHeight": 1.6,
+        "color": "mut"
+      },
+      "Numeral": {
+        "size": [
+          44,
+          38,
+          32
+        ],
+        "weight": 700,
+        "lineHeight": 1,
+        "tabularNums": true
+      },
+      "Legal": {
+        "size": [
+          12,
+          11,
+          11
+        ],
+        "weight": 300,
+        "lineHeight": 1.5,
+        "color": "legalMut"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "radius": "pill",
+      "minHeight": "44px",
+      "variants": [
+        "fill",
+        "solid",
+        "outline",
+        "ghost",
+        "gold",
+        "gold-o"
+      ],
+      "sizes": {
+        "sm": "10px 18px / 13px",
+        "md": "14px 26px / 15px",
+        "lg": "17px 32px / 16px"
+      },
+      "states": [
+        "hover",
+        "active",
+        "focus-visible",
+        "disabled"
+      ],
+      "icon": "Phosphor Thin, currentColor, 18px (15 sm / 19 lg)"
+    },
+    "statusColors": [
+      "success",
+      "warning",
+      "danger",
+      "info"
+    ]
+  },
+  "icons": {
+    "library": "Phosphor",
+    "weight": "Thin",
+    "stroke": "1pt (stroke-width 1 na grade 24)",
+    "color": "currentColor"
+  },
+  "gradients": {
+    "rule": "Somente cores do brand. NÃO usar conic, blob ou halo. Preferir meshes (radiais multiponto) e lineares.",
+    "examples": {
+      "primary": "linear-gradient(120deg,#9521FF,#5E12A8)",
+      "spectral": "linear-gradient(110deg,#321953,#9521FF 28%,#C286FF 54%,#FB87FF 80%,#FFB1BD)",
+      "mesh": "radial-gradient(at 18% 22%,rgba(194,134,255,.55) 0,transparent 45%),radial-gradient(at 78% 18%,rgba(251,135,255,.30) 0,transparent 42%),radial-gradient(at 68% 78%,rgba(149,33,255,.70) 0,transparent 50%),radial-gradient(at 30% 92%,rgba(255,202,155,.22) 0,transparent 46%),#0A070E"
+    }
+  },
+  "accessibility": {
+    "contrast": "WCAG AA — texto normal ≥4.5:1, texto grande/UI ≥3:1. No light, dourado/rosa como TEXTO usam -ink.",
+    "focus": "outline:2px solid var(--lilas) + box-shadow var(--focus); guard @media (forced-colors: active).",
+    "reducedMotion": "Respeitar prefers-reduced-motion.",
+    "touchTarget": "≥44px.",
+    "colorNotAlone": "Estados semânticos sempre com ícone + texto, nunca só cor."
+  }
+}

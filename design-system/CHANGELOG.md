@@ -1,0 +1,51 @@
+# Changelog — Workshops Facial Design System
+
+Todas as mudanças relevantes deste design system são registradas aqui.
+O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o
+versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
+
+- **MAJOR** — muda ou remove um token/API público (quebra compatibilidade).
+- **MINOR** — adiciona de forma retrocompatível (novo componente/token/variante).
+- **PATCH** — correções que não mudam a API (bug, contraste, ajuste fino).
+
+---
+
+## [Não lançado]
+
+_Nada pendente no momento._
+
+## [1.0.0] — Workshops Facial, derivado do Facial Academy: paleta vívida violeta+magenta, logo próprio, domínio presencial
+
+## [1.0.0] — 2026-06-19
+
+Primeira versão consolidada e documentada do sistema. Reúne fundações, camada
+de produto e camada de maturidade/processo.
+
+### Fundações
+- Arquitetura de tokens em 3 camadas (`primitive → semantic/intent → component`).
+- Cores, gradientes e tipografia (Silka, com fallback `system-ui`) da identidade violeta+magenta da marca.
+- Theming **dark/light** com paridade total e contraste **WCAG AA** em todos os textos.
+- Numerais com `tabular-nums` global.
+- Tokens de fundação: opacidade, border-width, blur, breakpoints/grid, elevação
+  semântica (surface → modal), sizing/touch ≥ 44px e aspect-ratio.
+
+### Produto
+- **Forms:** input, textarea, select, checkbox/radio/toggle, helper, erro e sucesso
+  inline + matriz canônica de estados (default/focus/filled/disabled/error/success/read-only).
+- **Feedback:** alert/banner inline, toast, spinner, skeleton e empty state.
+- **Overlays:** modal/dialog, tooltip e popover.
+- **Estrutura:** tabs, accordion, avatar (+ grupo e status), breadcrumb, paginação
+  e variantes de card (básico, interativo, mídia, horizontal).
+
+### CTA & acessibilidade de componente
+- Token de CTA theme-aware `--cta` (e derivados `--cta-grad` / `--cta-solid` / `--cta-solid-h` / `--cta-ink`) como camada de componente para o botão de ação principal. Os botões preenchidos/sólidos (`.b.fill` / `.wf-btn.wf-fill` e variantes solid) consomem `--cta` em vez de referenciar `--roxo2` / `--roxo-bright` diretamente.
+- Contraste de componente do CTA no **tema escuro**: o violeta do CTA é `#8A1AE6` (gradiente `#9521FF → #7A1AD6`; hover `#7A1AD6`; texto branco). O valor `#644389` "apagava" sobre o fundo escuro (~2.6:1 vs fundo) e reprovava na WCAG 1.4.11 (Non-text Contrast). O **tema claro** usa CTA `#7A1AD6` (gradiente `#7A1AD6 → #5E12A8`; texto branco).
+- Acessibilidade documentada em **2 níveis** para botões/CTA: (1) **texto** ≥ 4.5:1 e (2) **componente/botão vs. fundo** ≥ 3:1 (WCAG 1.4.11). O CTA do tema escuro usa o violeta vívido `#8A1AE6` justamente para passar o nível 2.
+
+### Maturidade & processo
+- Seção "Princípios & processo": arquitetura de tokens, princípios de motion e do/don't.
+- Este `CHANGELOG.md` e o `CONTRIBUTING.md` (governança, regra das 3 equipes, SemVer).
+- Menu de navegação fixo com scrollspy no showcase + respiro de layout revisado.
+
+[Não lançado]: #não-lançado
+[1.0.0]: #100--2026-06-19

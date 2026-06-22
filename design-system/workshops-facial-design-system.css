@@ -1,0 +1,210 @@
+/* ============================================================================
+   WORKSHOPS FACIAL · DESIGN SYSTEM — v1.0.0
+   Desenvolvido por Edegar Junior.
+   Identidade própria da marca.
+   ----------------------------------------------------------------------------
+   USO RÁPIDO
+     <html lang="pt-BR">                         <!-- dark é o padrão -->
+     <link rel="stylesheet" href="workshops-facial-design-system.css">
+     <body> ... </body>
+   Tema light: adicione data-theme="light" no <html> (toggle abaixo).
+   Sem data-theme, o tema segue prefers-color-scheme do sistema.
+   Tipografia: linke silka.css ANTES deste (Silka embutida, self-contained);
+   o fallback é system-ui, então tudo funciona mesmo sem a Silka.
+   ============================================================================ */
+
+/* ===== TOKENS · tema dark (padrão) ======================================== */
+:root{
+  /* Cores institucionais — a fonte da verdade. Nada deve sair desta paleta. */
+  --brand-roxo:#9521FF;        /* violeta vívido · marca primária (do logo) */
+  --brand-magenta:#C879FF;     /* magenta/lavanda vívido · accent primário */
+  --brand-roxo-apoio:#644389;  /* roxo Facial · apoio / linhagem */
+  --brand-lilas:#A289D7;       /* pantone 2655 U */
+  --brand-amarelo:#FFE4A4;     /* 7401 U 25% */
+  --brand-vermelho:#FFB1BD;    /* red 0331 U */
+  --brand-amarelado:#FFCA9B;   /* pantone 712 U */
+  --brand-branco:#FFFFFF;
+  --brand-preto:#000000;
+
+  /* Superfícies (dark) */
+  --bg:#0A070E; --bg2:#130D1A; --card:#1B1225; --card2:#22172F;
+  --line:rgba(149,33,255,.16);
+
+  /* Roxo / lilás / texto */
+  --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#9521FF;
+  --lilas:#C286FF; --lilas-soft:#D4B3FF; --magenta:#FB87FF;
+  --txt:#F9F8FD; --mut:#C2BAD0; --legal-mut:#826DAD;
+
+  /* Accent quente (-ink = variante de texto; -line = variante de borda) */
+  --gold:var(--brand-amarelo); --gold-deep:#D6C08A; --gold-ink:#FFE4A4; --gold-line:rgba(255,228,164,.42);
+  --rose:var(--brand-vermelho); --rose-ink:#FFB1BD; --rose-line:rgba(255,177,189,.42);
+  --peach:var(--brand-amarelado);
+
+  /* Marca (cor do logo SVG via currentColor) */
+  --logo:#FFFFFF;
+
+  /* Feedback / semânticas (sempre acompanhe de ícone + texto, nunca só cor) */
+  --success:#45C08A; --warning:#E8B53D; --danger:#FF7D93; --info:#A289D7;
+  --success-bg:rgba(69,192,138,.14); --warning-bg:rgba(232,181,61,.14);
+  --danger-bg:rgba(255,125,147,.14); --row-sel:rgba(162,137,215,.16); --info-bg:rgba(162,137,215,.14);
+
+  /* Sombras / elevação */
+  --sh:rgba(149,33,255,.40); --sh-strong:rgba(149,33,255,.50);
+  --elev-1:0 1px 2px rgba(0,0,0,.34), 0 2px 6px rgba(0,0,0,.30);
+  --elev-2:0 2px 4px rgba(0,0,0,.34), 0 8px 18px rgba(0,0,0,.40);
+  --elev-3:0 4px 12px rgba(0,0,0,.45), 0 16px 36px rgba(0,0,0,.55);
+  --elev-4:0 10px 24px rgba(0,0,0,.5), 0 28px 64px rgba(0,0,0,.62);
+  --elev-raised:var(--elev-1); --elev-overlay:var(--elev-3); --elev-modal:var(--elev-4);
+
+  /* Raio · espaçamento (base 4/8) · z-index · motion · foco */
+  --radius-sm:8px; --radius-md:14px; --radius-lg:18px; --radius-pill:30px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; --space-12:48px;
+  --z-base:0; --z-raised:10; --z-sticky:40; --z-overlay:100; --z-toast:1000;
+  --motion-fast:.15s; --motion:.2s; --motion-slow:.4s; --ease:cubic-bezier(.2,.8,.2,1);
+  --focus:0 0 0 3px rgba(149,33,255,.55);
+  /* Foundations: opacidade · borda · blur · breakpoints · sizing · proporção */
+  --opacity-disabled:.45; --opacity-muted:.66; --opacity-hover:.08; --opacity-overlay:.58;
+  --bw-hair:1px; --bw-1:1px; --bw-2:2px;
+  --blur-sm:6px; --blur-md:12px; --blur-lg:20px;
+  --bp-phone:390px; --bp-tablet:810px; --bp-desktop:1200px;
+  --size-icon-sm:16px; --size-icon:20px; --size-icon-lg:24px; --control-h:44px; --touch-min:44px; --row-h:46px; --row-h-compact:38px; --side-w:248px; --cal-cell:38px;
+  --ar-square:1/1; --ar-photo:4/3; --ar-wide:16/9;
+
+  /* Code (permanece escuro nos dois temas) */
+  --code-bg:#060408; --code-txt:#B39EDE; --code-comment:#8E7DB2; --code-key:#FFE4A4;
+
+  --font-sans:'Silka','Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:dark;
+ --cta-grad:linear-gradient(120deg,#9521FF,#7A1AD6); --cta-solid:#8A1AE6; --cta-solid-h:#7A1AD6; --cta-ink:#fff;}
+
+/* Valores do tema light, reutilizados pelos dois seletores abaixo */
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#FAFAFA; --bg2:#F5F1FB; --card:#FAF7FE; --card2:#F1EAFA;
+    --line:rgba(106,18,200,.18);
+    --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#6A12C0;
+    --lilas:#7A1AD6; --lilas-soft:#8A3DE0; --magenta:#C13DE0; --magenta-ink:#A21CC9;
+    --txt:#241733; --mut:#6B5C87; --legal-mut:#6B5C87;
+    --gold:#FFE4A4; --gold-deep:#D6C08A; --gold-ink:#7A5A0E; --gold-line:rgba(122,90,14,.55);
+    --rose:#FFB1BD; --rose-ink:#B04A5E; --rose-line:rgba(176,74,94,.50);
+    --peach:#FFCA9B;
+    --logo:#241733;
+    --success:#147A45; --warning:#8A5A00; --danger:#BE2C45; --info:#5E4A8C;
+    --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10);
+    --danger-bg:rgba(199,47,73,.10); --row-sel:rgba(100,67,137,.10); --info-bg:rgba(94,74,140,.10);
+    --sh:rgba(122,26,214,.18); --sh-strong:rgba(122,26,214,.26);
+    --elev-1:0 1px 2px rgba(100,67,137,.10), 0 2px 6px rgba(100,67,137,.08); --elev-2:0 2px 4px rgba(100,67,137,.10), 0 8px 16px rgba(100,67,137,.12);
+    --elev-3:0 4px 10px rgba(100,67,137,.12), 0 16px 32px rgba(100,67,137,.16); --elev-4:0 8px 18px rgba(100,67,137,.14), 0 28px 56px rgba(100,67,137,.22);
+    color-scheme:light;
+   --cta-grad:linear-gradient(120deg,#7A1AD6,#5E12A8); --cta-solid:#7A1AD6; --cta-solid-h:#6A12C0; --cta-ink:#fff;}
+}
+[data-theme="light"]{
+  --bg:#FAFAFA; --bg2:#F5F1FB; --card:#FAF7FE; --card2:#F1EAFA;
+  --line:rgba(106,18,200,.18);
+  --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#6A12C0;
+  --lilas:#7A1AD6; --lilas-soft:#8A3DE0; --magenta:#C13DE0; --magenta-ink:#A21CC9;
+  --txt:#241733; --mut:#6B5C87; --legal-mut:#6B5C87;
+  --gold:#FFE4A4; --gold-deep:#D6C08A; --gold-ink:#7A5A0E; --gold-line:rgba(122,90,14,.55);
+  --rose:#FFB1BD; --rose-ink:#B04A5E; --rose-line:rgba(176,74,94,.50);
+  --peach:#FFCA9B;
+  --logo:#241733;
+  --success:#147A45; --warning:#8A5A00; --danger:#BE2C45; --info:#5E4A8C;
+  --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10);
+  --danger-bg:rgba(199,47,73,.10); --row-sel:rgba(100,67,137,.10); --info-bg:rgba(94,74,140,.10);
+  --sh:rgba(122,26,214,.18); --sh-strong:rgba(122,26,214,.26);
+  --elev-1:0 1px 2px rgba(100,67,137,.10), 0 2px 6px rgba(100,67,137,.08); --elev-2:0 2px 4px rgba(100,67,137,.10), 0 8px 16px rgba(100,67,137,.12);
+  --elev-3:0 4px 10px rgba(100,67,137,.12), 0 16px 32px rgba(100,67,137,.16); --elev-4:0 8px 18px rgba(100,67,137,.14), 0 28px 56px rgba(100,67,137,.22);
+  --logo:#241733;
+  color-scheme:light;
+ --cta-grad:linear-gradient(120deg,#7A1AD6,#5E12A8); --cta-solid:#7A1AD6; --cta-solid-h:#6A12C0; --cta-ink:#fff;}
+
+/* ===== RESET / BASE ======================================================= */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--txt);line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+img,svg,video{display:block;max-width:100%}
+a{color:var(--lilas);text-decoration:none}
+
+/* Acessibilidade: foco visível (WCAG 2.4.7 / 1.4.11) + movimento reduzido */
+a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--lilas);outline-offset:2px;box-shadow:var(--focus);border-radius:6px}
+@media (forced-colors: active){
+  a:focus-visible,button:focus-visible,.wf-btn:focus-visible{outline:2px solid Highlight;outline-offset:2px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* ===== TIPOGRAFIA · escala fluida (Desktop ⇄ Phone) ======================= */
+/* Breakpoints Framer de referência: Desktop ≥1200 · Tablet ≤810 · Phone ≤390 */
+.wf-eyebrow{font-size:clamp(11px,1.4vw,12px);letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+.wf-h1{font-size:clamp(34px,6vw,60px);font-weight:500;letter-spacing:-.025em;line-height:1.03}
+.wf-h2{font-size:clamp(26px,4vw,38px);font-weight:500;letter-spacing:-.02em;line-height:1.12}
+.wf-h3{font-size:clamp(20px,2.4vw,24px);font-weight:500;line-height:1.2}
+.wf-h4{font-size:clamp(18px,2vw,20px);font-weight:500;letter-spacing:-.01em;line-height:1.25}
+.wf-h5{font-size:clamp(16px,1.7vw,17px);font-weight:500;line-height:1.3}
+.wf-h6{font-size:clamp(13px,1.4vw,15px);font-weight:500;line-height:1.35}
+.wf-lead{font-size:clamp(16px,1.8vw,18px);font-weight:300;color:var(--mut);line-height:1.5}
+.wf-body{font-size:16px;font-weight:300;line-height:1.65}
+.wf-small{font-size:14px;font-weight:300;color:var(--mut);line-height:1.6}
+.wf-legal{font-size:clamp(11px,1.2vw,12px);font-weight:300;color:var(--legal-mut);line-height:1.5}
+.wf-num{font-size:clamp(32px,4.6vw,44px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.wf-hl{color:var(--lilas)}
+
+/* ===== BOTÕES =============================================================
+   Estrutura: class="wf-btn <variante> <tamanho>"
+   Variantes: wf-fill | wf-solid | wf-outline | wf-ghost | wf-gold | wf-gold-o
+   Tamanhos : wf-sm | (md = padrão) | wf-lg
+   Ícone    : <svg class="wf-ico">…</svg> (Phosphor Thin, currentColor)        */
+.wf-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:inherit;font-size:15px;font-weight:600;border:none;cursor:pointer;text-decoration:none;
+  border-radius:var(--radius-pill);transition:.2s var(--ease);white-space:nowrap;min-height:44px;max-width:100%;padding:14px 26px}
+.wf-btn.wf-sm{font-size:13px;padding:10px 18px;gap:7px}
+.wf-btn.wf-lg{font-size:16px;padding:17px 32px}
+.wf-btn.wf-fill{background:var(--cta-grad);color:var(--cta-ink);box-shadow:0 10px 30px var(--sh)}
+.wf-btn.wf-fill:hover{transform:translateY(-2px);box-shadow:0 16px 38px var(--sh-strong)}
+.wf-btn.wf-solid{background:var(--cta-solid);color:var(--cta-ink)}
+.wf-btn.wf-solid:hover{background:var(--cta-solid-h)}
+.wf-btn.wf-outline{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.wf-btn.wf-outline:hover{border-color:var(--lilas);color:var(--lilas)}
+.wf-btn.wf-ghost{background:transparent;color:var(--lilas);padding:10px 14px;border-radius:var(--radius-sm)}
+.wf-btn.wf-ghost:hover{color:var(--lilas-soft);text-decoration:underline;text-underline-offset:3px}
+.wf-btn.wf-gold{background:var(--gold);color:#140D1B;border:1px solid var(--gold-ink)}
+.wf-btn.wf-gold:hover{background:var(--gold-deep)}
+.wf-btn.wf-gold-o{background:transparent;color:var(--gold-ink);border:1px solid var(--gold-line)}
+.wf-btn.wf-gold-o:hover{border-color:var(--gold-ink)}
+.wf-btn:active{transform:translateY(0) scale(.985);transition-duration:var(--motion-fast)}
+.wf-btn:disabled,.wf-btn[aria-disabled="true"]{opacity:.42;pointer-events:none;box-shadow:none;transform:none}
+.wf-ico{width:18px;height:18px;flex:0 0 auto}
+.wf-btn.wf-sm .wf-ico{width:15px;height:15px}.wf-btn.wf-lg .wf-ico{width:19px;height:19px}
+@media(max-width:560px){.wf-btn{white-space:normal;text-align:center}}
+
+/* ===== CHIP / BADGE / STATUS ============================================== */
+.wf-chip{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);
+  color:var(--txt);font-size:13.5px;padding:9px 16px;border-radius:var(--radius-pill)}
+.wf-badge{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;
+  color:var(--gold-ink);border:1px solid var(--gold-line);padding:4px 10px;border-radius:20px}
+.wf-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;
+  padding:9px 15px;border-radius:var(--radius-pill);border:1px solid currentColor}
+.wf-status .wf-ico{width:16px;height:16px}
+.wf-status.is-success{color:var(--success);background:var(--success-bg)}
+.wf-status.is-warning{color:var(--warning);background:var(--warning-bg)}
+.wf-status.is-danger{color:var(--danger);background:var(--danger-bg)}
+.wf-status.is-info{color:var(--info);background:var(--info-bg)}
+
+/* ===== CARD / SUPERFÍCIE / LOGO =========================================== */
+.wf-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-6)}
+.wf-logo{color:var(--logo)}                 /* aplique em SVG com fill="currentColor" */
+
+/* ===== GRADIENTES (subconjunto — só meshes/lineares do brand) =============
+   Biblioteca completa em index.html (seção Gradientes).
+   Regra: somente cores do brand. NÃO usar conic, blob ou halo.              */
+.wf-grad-primary{background:linear-gradient(120deg,#9521FF,#5E12A8)}
+.wf-grad-spectral{background:linear-gradient(110deg,#321953,#9521FF 28%,#C286FF 54%,#FB87FF 80%,#FFB1BD)}
+.wf-grad-mesh{background:
+  radial-gradient(at 18% 22%,rgba(162,137,215,.55) 0,transparent 45%),
+  radial-gradient(at 78% 18%,rgba(255,177,189,.30) 0,transparent 42%),
+  radial-gradient(at 68% 78%,rgba(100,67,137,.70) 0,transparent 50%),
+  radial-gradient(at 30% 92%,rgba(255,202,155,.22) 0,transparent 46%),#0A070E}
+.wf-grad-spot{background:radial-gradient(at 50% -15%,rgba(162,137,215,.55) 0,transparent 62%),#0A070E}
