@@ -128,7 +128,7 @@ O **CTA** (botão preenchido/sólido) é o único token de cor que muda de tom e
 /* Raio */            --radius-sm:8px  --radius-md:14px  --radius-lg:18px  --radius-pill:30px
 /* Espaçamento (4px)*/--space-1:4  -2:8  -3:12  -4:16  -6:24  -8:32  -12:48 (px)
 /* Motion */          --motion-fast:.15s  --motion:.2s  --motion-slow:.4s  --ease:cubic-bezier(.2,.8,.2,1)
-/* Foco */            --focus:0 0 0 3px rgba(149,33,255,.55)
+/* Foco */            --focus:0 0 0 2px var(--bg), 0 0 0 4px var(--focus-ring)
 /* z-index */         --z-base:0  --z-raised:10  --z-sticky:40  --z-overlay:100  --z-toast:1000
 /* Opacidade */       --opacity-disabled:.45  --opacity-muted:.66  --opacity-hover:.08  --opacity-overlay:.58
 /* Borda */           --bw-hair:1px  --bw-1:1px  --bw-2:2px

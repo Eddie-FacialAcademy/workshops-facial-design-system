@@ -14,6 +14,18 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.1.1] — 2026-08-25
+### Corrigido
+- Anel de foco em duas camadas: `--focus` agora é `0 0 0 2px var(--bg),
+  0 0 0 4px var(--focus-ring)`, com `--focus-ring` sólido por tema (escuro
+  `#C879FF`, claro `#7A1AD6`). O anel antigo (accent com 55% de opacidade, valor
+  único pros dois temas) media abaixo de 3:1 contra os fundos e reprovava a
+  WCAG 1.4.11. Sincronizado em showcase, CSS do pacote, tokens.json e docs.
+- Drift de reskin corrigido: o `tokens.json` e o bloco "Tokens" do showcase
+  traziam o valor de foco lilás da Facial; agora usam o violeta da marca.
+- Guard de alto contraste (`forced-colors`) com `outline` `!important`: o
+  indicador de foco não é mais anulado pelo `outline:none` dos componentes.
+
 ## [1.1.0] — 2026-08-25
 ### Adicionado
 - Menu "Design systems" na navegação do showcase: acesso direto aos design

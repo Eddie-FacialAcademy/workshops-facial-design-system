@@ -195,7 +195,8 @@
     "slow": "0.4s",
     "ease": "cubic-bezier(.2,.8,.2,1)"
   },
-  "focus": "0 0 0 3px rgba(162,137,215,.55)",
+  "focus": "0 0 0 2px var(--bg), 0 0 0 4px var(--focus-ring)",
+  "focusRing": { "dark": "#C879FF", "light": "#7A1AD6" },
   "typography": {
     "fontFamily": "'Silka', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
     "weights": [

@@ -80,7 +80,7 @@ No **tema escuro** o CTA usa o violeta vívido (`#8A1AE6`) para garantir **contr
 - **Elevação:** `--elev-1..4` (sombras roxas sutis no light, mais densas no dark)
 - **Z-index:** base 0 · raised 10 · sticky 40 · overlay 100 · toast 1000
 - **Motion:** fast .15s · base .2s · slow .4s · ease `cubic-bezier(.2,.8,.2,1)`
-- **Foco:** `--focus: 0 0 0 3px rgba(149,33,255,.55)`
+- **Foco:** `--focus: 0 0 0 2px var(--bg), 0 0 0 4px var(--focus-ring)`
 - **Foundations:** opacidade (disabled .45 / muted .66 / hover .08 / overlay .58) · border-width (hair/1/2) · blur (sm 6 / md 12 / lg 20) · breakpoints (390/810/1200) · sizing (ícone 16/20/24, control/touch 44px) · aspect-ratio (1:1 / 4:3 / 16:9).
 - **Elevação semântica:** `--elev-raised` (=1) · `--elev-overlay` (=3) · `--elev-modal` (=4); use o papel, não o número. Sombras em **camadas**: pretas no dark; com matiz da marca no light.
 
