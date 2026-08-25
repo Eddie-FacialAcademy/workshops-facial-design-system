@@ -14,6 +14,12 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.2.0] — 2026-08-25
+### Adicionado
+- Favicon da página: badge arredondado na cor da marca com o ícone oficial do
+  logo em branco, embutido como SVG data-URI no `<head>` (a página segue
+  self-contained, sem requisição extra).
+
 ## [1.1.1] — 2026-08-25
 ### Corrigido
 - Anel de foco em duas camadas: `--focus` agora é `0 0 0 2px var(--bg),
