@@ -14,12 +14,18 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
-## [1.0.0] — Workshops Facial, derivado do Facial Academy: paleta vívida violeta+magenta, logo próprio, domínio presencial
+## [1.1.0] — 2026-08-25
+### Adicionado
+- Menu "Design systems" na navegação do showcase: acesso direto aos design
+  systems das seis marcas (Facial Academy, Facial Class, Facial Scale,
+  Workshops Facial, Corporal Academy, Corporal Class), com a marca atual
+  sinalizada e acordeão próprio no menu mobile.
 
 ## [1.0.0] — 2026-06-19
 
-Primeira versão consolidada e documentada do sistema. Reúne fundações, camada
-de produto e camada de maturidade/processo.
+Primeira versão do Workshops Facial, derivado do Facial Academy: paleta vívida
+violeta+magenta, logo próprio e domínio presencial. Reúne fundações, camada de
+produto e camada de maturidade/processo.
 
 ### Fundações
 - Arquitetura de tokens em 3 camadas (`primitive → semantic/intent → component`).
