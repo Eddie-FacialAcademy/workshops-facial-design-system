@@ -14,6 +14,14 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.2.2] — 2026-08-28
+### Corrigido
+- Documentação de cor "Secundário": o swatch da seção Cores e a tabela de
+  Color Styles mostravam um valor que não era o token `--mut` real do tema
+  (drift herdado do molde). Agora exibem o valor vivo do token nos dois temas.
+- Grafia: "antiimproviso" corrigido para "anti-improviso" e "pra o" para
+  "para o" na seção Voz e tom.
+
 ## [1.2.1] — 2026-08-28
 ### Alterado
 - Menu "Design systems" agora inclui a Fotografia na HOF, nova marca do
