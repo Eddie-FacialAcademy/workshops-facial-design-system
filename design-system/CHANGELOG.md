@@ -14,6 +14,17 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.2.3] — 2026-08-28
+### Alterado
+- Menu "Design systems" agora inclui HArmonyCa Performance e Expert em
+  Lábios 2026 (nove marcas no seletor).
+### Corrigido
+- CSS do pacote: o bloco `prefers-color-scheme: light` não redefinia o
+  `--focus-ring`; usuário com sistema claro e sem `data-theme` recebia o anel
+  do tema escuro. Agora os dois caminhos do claro têm o anel certo.
+- Tabela de Color Styles do showcase: a coluna Escuro de "text/Secundário"
+  mostrava um valor que não era o token `--mut` real (drift do molde).
+
 ## [1.2.2] — 2026-08-28
 ### Corrigido
 - Documentação de cor "Secundário": o swatch da seção Cores e a tabela de
