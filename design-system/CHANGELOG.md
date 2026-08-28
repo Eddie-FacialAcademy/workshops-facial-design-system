@@ -14,6 +14,11 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.2.1] — 2026-08-28
+### Alterado
+- Menu "Design systems" agora inclui a Fotografia na HOF, nova marca do
+  ecossistema (sete marcas no seletor).
+
 ## [1.2.0] — 2026-08-25
 ### Adicionado
 - Favicon da página: badge arredondado na cor da marca com o ícone oficial do
