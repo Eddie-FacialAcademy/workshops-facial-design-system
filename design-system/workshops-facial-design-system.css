@@ -1,5 +1,5 @@
 /* ============================================================================
-   WORKSHOPS FACIAL · DESIGN SYSTEM — v1.0.0
+   WORKSHOPS FACIAL · DESIGN SYSTEM — v1.2.4
    Desenvolvido por Edegar Junior.
    Identidade própria da marca.
    ----------------------------------------------------------------------------
@@ -75,7 +75,7 @@
 
   --font-sans:'Silka','Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   color-scheme:dark;
- --cta-grad:linear-gradient(120deg,#9521FF,#7A1AD6); --cta-solid:#8A1AE6; --cta-solid-h:#7A1AD6; --cta-ink:#fff;}
+ --cta-grad:linear-gradient(120deg,#9521FF,#8B2CE5); --cta-solid:#8F23E7; --cta-solid-h:#8B2CE5; --cta-ink:#fff;}
 
 /* Valores do tema light, reutilizados pelos dois seletores abaixo */
 @media (prefers-color-scheme: light){

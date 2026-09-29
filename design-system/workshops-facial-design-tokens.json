@@ -1,7 +1,7 @@
 {
   "$meta": {
     "name": "Workshops Facial Design System",
-    "version": "1.0.0",
+    "version": "1.2.4",
     "author": "Edegar Junior",
     "source": "Identidade visual da marca Workshops Facial (derivada do Facial Academy)",
     "language": "pt-BR",
@@ -40,8 +40,8 @@
       "roxoBright": "#9521FF",
       "lilas": "#C286FF",
       "lilasSoft": "#D4B3FF",
-      "cta": "#8A1AE6",
-      "ctaGrad": "linear-gradient(120deg,#9521FF,#7A1AD6)",
+      "cta": "#8F23E7",
+      "ctaGrad": "linear-gradient(120deg,#9521FF,#8B2CE5)", "ctaSolidH": "#8B2CE5",
       "ctaInk": "#fff",
       "txt": "#F9F8FD",
       "mut": "#C2BAD0",
@@ -80,7 +80,7 @@
       "lilas": "#7A1AD6",
       "lilasSoft": "#8A3DE0",
       "cta": "#7A1AD6",
-      "ctaGrad": "linear-gradient(120deg,#7A1AD6,#5E12A8)",
+      "ctaGrad": "linear-gradient(120deg,#7A1AD6,#5E12A8)", "ctaSolidH": "#6A12C0",
       "ctaInk": "#fff",
       "txt": "#241733",
       "mut": "#6B5C87",

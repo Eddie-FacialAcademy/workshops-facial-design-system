@@ -36,14 +36,14 @@ export default function Button(props) {
     const variants: Record<string, React.CSSProperties> = {
         fill: {
             background:
-                "var(--cta-grad, linear-gradient(120deg,#9521FF,#7A1AD6))",
+                "var(--cta-grad, linear-gradient(120deg,#9521FF,#8B2CE5))",
             color: "var(--cta-ink,#fff)",
             boxShadow: "0 10px 30px var(--sh,rgba(149,33,255,.40))",
         },
         solid: {
             background:
                 hover && !disabled
-                    ? "var(--cta-solid-h,#8A1AE6)"
+                    ? "var(--cta-solid-h,#8F23E7)"
                     : "var(--cta-solid,#7A1AD6)",
             color: "var(--cta-ink,#fff)",
         },

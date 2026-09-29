@@ -6,10 +6,10 @@
 Padroniza a copy de interface: hero, notas de seção, botões, alertas, estados vazios, validação, tooltips e o conteúdo de exemplo dos componentes. Objetivo: **builder para builder**. A copy ajuda quem monta a tela a decidir rápido e certo.
 
 ## Princípio geral
-Técnica, direta, confiante, antiimproviso. Sem autoelogio, sem hipérbole, sem "happy talk". A copy diz o que a coisa faz e qual é o próximo passo.
+Técnica, direta, confiante, anti-improviso. Sem autoelogio, sem hipérbole, sem "happy talk". A copy diz o que a coisa faz e qual é o próximo passo.
 
 ## Adjetivos da voz
-Técnica · direta · confiante · precisa · antiimproviso.
+Técnica · direta · confiante · precisa · anti-improviso.
 
 ## Faça
 - O rótulo do botão diz a **ação** ("Salvar", "Adicionar item"), nunca o genérico ("Enviar", "OK").
@@ -21,7 +21,7 @@ Técnica · direta · confiante · precisa · antiimproviso.
 
 ## Não faça
 - **Sem "&".** Escreva a palavra "e".
-- **Sem travessão** (— em-dash nem – en-dash) no meio do texto. Use vírgula, dois-pontos, parênteses ou hífen comum ("-").
+- **Sem travessão** (em-dash `—` nem en-dash `–`) no meio do texto. Use vírgula, dois-pontos, ponto ou parênteses; não troque por hífen solto.
 - Sem **hipérbole** ("a melhor", "incrível", "revolucionário"). Superlativo vazio enfraquece.
 - Sem **"happy talk"** ("Bem-vindo!", "Que bom te ver!").
 - Não **compare arquétipos** de profissional ("a diferença entre quem tem sucesso e quem tem medo").
