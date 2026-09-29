@@ -1,5 +1,5 @@
 /* ============================================================================
-   WORKSHOPS FACIAL · DESIGN SYSTEM — v1.2.4
+   WORKSHOPS FACIAL · DESIGN SYSTEM — v1.3.0
    Desenvolvido por Edegar Junior.
    Identidade própria da marca.
    ----------------------------------------------------------------------------
@@ -16,13 +16,13 @@
 /* ===== TOKENS · tema dark (padrão) ======================================== */
 :root{
   /* Cores institucionais — a fonte da verdade. Nada deve sair desta paleta. */
-  --brand-roxo:#9521FF;        /* violeta vívido · marca primária (do logo) */
+  --brand-roxo-vivido:#9521FF;        /* violeta vívido · marca primária (do logo) */
   --brand-magenta:#C879FF;     /* magenta/lavanda vívido · accent primário */
-  --brand-roxo-apoio:#644389;  /* roxo Facial · apoio / linhagem */
+  --brand-roxo-facial:#644389;  /* roxo Facial · apoio / linhagem */
   --brand-lilas:#A289D7;       /* pantone 2655 U */
-  --brand-amarelo:#FFE4A4;     /* 7401 U 25% */
-  --brand-vermelho:#FFB1BD;    /* red 0331 U */
-  --brand-amarelado:#FFCA9B;   /* pantone 712 U */
+  --brand-dourado:#FFE4A4;     /* 7401 U 25% */
+  --brand-rosa:#FFB1BD;    /* red 0331 U */
+  --brand-pessego:#FFCA9B;   /* pantone 712 U */
   --brand-branco:#FFFFFF;
   --brand-preto:#000000;
 
@@ -31,14 +31,14 @@
   --line:rgba(149,33,255,.16);
 
   /* Roxo / lilás / texto */
-  --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#9521FF;
-  --lilas:#C286FF; --lilas-soft:#D4B3FF; --magenta:#FB87FF;
+  --primary-deep:#321953; --primary:#7A1AD6; --primary-bright:#9521FF;
+  --accent:#C286FF; --accent-soft:#D4B3FF; --secondary:#FB87FF;
   --txt:#F9F8FD; --mut:#C2BAD0; --legal-mut:#826DAD;
 
   /* Accent quente (-ink = variante de texto; -line = variante de borda) */
-  --gold:var(--brand-amarelo); --gold-deep:#D6C08A; --gold-ink:#FFE4A4; --gold-line:rgba(255,228,164,.42);
-  --rose:var(--brand-vermelho); --rose-ink:#FFB1BD; --rose-line:rgba(255,177,189,.42);
-  --peach:var(--brand-amarelado);
+  --highlight:var(--brand-dourado); --highlight-deep:#D6C08A; --highlight-ink:#FFE4A4; --highlight-line:rgba(255,228,164,.42);
+  --support:var(--brand-rosa); --support-ink:#FFB1BD; --support-line:rgba(255,177,189,.42);
+  --glow:var(--brand-pessego);
 
   /* Marca (cor do logo SVG via currentColor) */
   --logo:#FFFFFF;
@@ -75,19 +75,28 @@
 
   --font-sans:'Silka','Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   color-scheme:dark;
- --cta-grad:linear-gradient(120deg,#9521FF,#8B2CE5); --cta-solid:#8F23E7; --cta-solid-h:#8B2CE5; --cta-ink:#fff;}
+ --cta-grad:linear-gradient(120deg,#9521FF,#8B2CE5); --cta-solid:#8F23E7; --cta-solid-h:#8B2CE5; --cta-ink:#fff;
+
+  /* Nomes legados (descontinuados na 1.3.0, saem na 2.0): apontam para os nomes novos.
+     Use os nomes novos em código novo. */
+  --roxo-bright:var(--primary-bright); --lilas-soft:var(--accent-soft); --gold-deep:var(--highlight-deep); --gold-line:var(--highlight-line);
+  --rose-line:var(--support-line); --gold-ink:var(--highlight-ink); --rose-ink:var(--support-ink); --magenta:var(--secondary);
+  --roxo2:var(--primary); --lilas:var(--accent); --peach:var(--glow); --roxo:var(--primary-deep);
+  --gold:var(--highlight); --rose:var(--support); --brand-amarelo:var(--brand-dourado); --brand-vermelho:var(--brand-rosa);
+  --brand-amarelado:var(--brand-pessego); --brand-roxo:var(--brand-roxo-vivido); --brand-roxo-apoio:var(--brand-roxo-facial);
+}
 
 /* Valores do tema light, reutilizados pelos dois seletores abaixo */
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
     --bg:#FAFAFA; --focus-ring:#7A1AD6; --bg2:#F5F1FB; --card:#FAF7FE; --card2:#F1EAFA;
     --line:rgba(106,18,200,.18);
-    --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#6A12C0;
-    --lilas:#7A1AD6; --lilas-soft:#8A3DE0; --magenta:#C13DE0; --magenta-ink:#A21CC9;
+    --primary-deep:#321953; --primary:#7A1AD6; --primary-bright:#6A12C0;
+    --accent:#7A1AD6; --accent-soft:#8A3DE0; --secondary:#C13DE0; --magenta-ink:#A21CC9;
     --txt:#241733; --mut:#6B5C87; --legal-mut:#6B5C87;
-    --gold:#FFE4A4; --gold-deep:#D6C08A; --gold-ink:#7A5A0E; --gold-line:rgba(122,90,14,.55);
-    --rose:#FFB1BD; --rose-ink:#B04A5E; --rose-line:rgba(176,74,94,.50);
-    --peach:#FFCA9B;
+    --highlight:#FFE4A4; --highlight-deep:#D6C08A; --highlight-ink:#7A5A0E; --highlight-line:rgba(122,90,14,.55);
+    --support:#FFB1BD; --support-ink:#B04A5E; --support-line:rgba(176,74,94,.50);
+    --glow:#FFCA9B;
     --logo:#241733;
     --success:#147A45; --warning:#8A5A00; --danger:#BE2C45; --info:#5E4A8C;
     --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10);
@@ -101,12 +110,12 @@
 [data-theme="light"]{
   --bg:#FAFAFA; --focus-ring:#7A1AD6; --bg2:#F5F1FB; --card:#FAF7FE; --card2:#F1EAFA;
   --line:rgba(106,18,200,.18);
-  --roxo:#321953; --roxo2:#7A1AD6; --roxo-bright:#6A12C0;
-  --lilas:#7A1AD6; --lilas-soft:#8A3DE0; --magenta:#C13DE0; --magenta-ink:#A21CC9;
+  --primary-deep:#321953; --primary:#7A1AD6; --primary-bright:#6A12C0;
+  --accent:#7A1AD6; --accent-soft:#8A3DE0; --secondary:#C13DE0; --magenta-ink:#A21CC9;
   --txt:#241733; --mut:#6B5C87; --legal-mut:#6B5C87;
-  --gold:#FFE4A4; --gold-deep:#D6C08A; --gold-ink:#7A5A0E; --gold-line:rgba(122,90,14,.55);
-  --rose:#FFB1BD; --rose-ink:#B04A5E; --rose-line:rgba(176,74,94,.50);
-  --peach:#FFCA9B;
+  --highlight:#FFE4A4; --highlight-deep:#D6C08A; --highlight-ink:#7A5A0E; --highlight-line:rgba(122,90,14,.55);
+  --support:#FFB1BD; --support-ink:#B04A5E; --support-line:rgba(176,74,94,.50);
+  --glow:#FFCA9B;
   --logo:#241733;
   --success:#147A45; --warning:#8A5A00; --danger:#BE2C45; --info:#5E4A8C;
   --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10);
@@ -123,11 +132,11 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font-sans);background:var(--bg);color:var(--txt);line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
 img,svg,video{display:block;max-width:100%}
-a{color:var(--lilas);text-decoration:none}
+a{color:var(--accent);text-decoration:none}
 
 /* Acessibilidade: foco visível (WCAG 2.4.7 / 1.4.11) + movimento reduzido */
 a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visible{
-  outline:2px solid var(--lilas);outline-offset:2px;box-shadow:var(--focus);border-radius:6px}
+  outline:2px solid var(--accent);outline-offset:2px;box-shadow:var(--focus);border-radius:6px}
 @media (forced-colors: active){
   a:focus-visible,button:focus-visible,.wf-btn:focus-visible{outline:2px solid Highlight!important;outline-offset:2px}
 }
@@ -138,7 +147,7 @@ a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visi
 
 /* ===== TIPOGRAFIA · escala fluida (Desktop ⇄ Phone) ======================= */
 /* Breakpoints Framer de referência: Desktop ≥1200 · Tablet ≤810 · Phone ≤390 */
-.wf-eyebrow{font-size:clamp(11px,1.4vw,12px);letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+.wf-eyebrow{font-size:clamp(11px,1.4vw,12px);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
 .wf-h1{font-size:clamp(34px,6vw,60px);font-weight:500;letter-spacing:-.025em;line-height:1.03}
 .wf-h2{font-size:clamp(26px,4vw,38px);font-weight:500;letter-spacing:-.02em;line-height:1.12}
 .wf-h3{font-size:clamp(20px,2.4vw,24px);font-weight:500;line-height:1.2}
@@ -150,7 +159,7 @@ a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visi
 .wf-small{font-size:14px;font-weight:300;color:var(--mut);line-height:1.6}
 .wf-legal{font-size:clamp(11px,1.2vw,12px);font-weight:300;color:var(--legal-mut);line-height:1.5}
 .wf-num{font-size:clamp(32px,4.6vw,44px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
-.wf-hl{color:var(--lilas)}
+.wf-hl{color:var(--accent)}
 
 /* ===== BOTÕES =============================================================
    Estrutura: class="wf-btn <variante> <tamanho>"
@@ -167,13 +176,13 @@ a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visi
 .wf-btn.wf-solid{background:var(--cta-solid);color:var(--cta-ink)}
 .wf-btn.wf-solid:hover{background:var(--cta-solid-h)}
 .wf-btn.wf-outline{background:transparent;color:var(--txt);border:1px solid var(--line)}
-.wf-btn.wf-outline:hover{border-color:var(--lilas);color:var(--lilas)}
-.wf-btn.wf-ghost{background:transparent;color:var(--lilas);padding:10px 14px;border-radius:var(--radius-sm)}
-.wf-btn.wf-ghost:hover{color:var(--lilas-soft);text-decoration:underline;text-underline-offset:3px}
-.wf-btn.wf-gold{background:var(--gold);color:#140D1B;border:1px solid var(--gold-ink)}
-.wf-btn.wf-gold:hover{background:var(--gold-deep)}
-.wf-btn.wf-gold-o{background:transparent;color:var(--gold-ink);border:1px solid var(--gold-line)}
-.wf-btn.wf-gold-o:hover{border-color:var(--gold-ink)}
+.wf-btn.wf-outline:hover{border-color:var(--accent);color:var(--accent)}
+.wf-btn.wf-ghost{background:transparent;color:var(--accent);padding:10px 14px;border-radius:var(--radius-sm)}
+.wf-btn.wf-ghost:hover{color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px}
+.wf-btn.wf-highlight,.wf-btn.wf-gold{background:var(--highlight);color:#140D1B;border:1px solid var(--highlight-ink)}
+.wf-btn.wf-highlight:hover,.wf-btn.wf-gold:hover{background:var(--highlight-deep)}
+.wf-btn.wf-highlight-o,.wf-btn.wf-gold-o{background:transparent;color:var(--highlight-ink);border:1px solid var(--highlight-line)}
+.wf-btn.wf-highlight-o:hover,.wf-btn.wf-gold-o:hover{border-color:var(--highlight-ink)}
 .wf-btn:active{transform:translateY(0) scale(.985);transition-duration:var(--motion-fast)}
 .wf-btn:disabled,.wf-btn[aria-disabled="true"]{opacity:.42;pointer-events:none;box-shadow:none;transform:none}
 .wf-ico{width:18px;height:18px;flex:0 0 auto}
@@ -184,7 +193,7 @@ a:focus-visible,button:focus-visible,.wf-btn:focus-visible,[tabindex]:focus-visi
 .wf-chip{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);
   color:var(--txt);font-size:13.5px;padding:9px 16px;border-radius:var(--radius-pill)}
 .wf-badge{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;
-  color:var(--gold-ink);border:1px solid var(--gold-line);padding:4px 10px;border-radius:20px}
+  color:var(--highlight-ink);border:1px solid var(--highlight-line);padding:4px 10px;border-radius:20px}
 .wf-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;
   padding:9px 15px;border-radius:var(--radius-pill);border:1px solid currentColor}
 .wf-status .wf-ico{width:16px;height:16px}

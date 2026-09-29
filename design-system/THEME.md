@@ -8,7 +8,7 @@ Toda cor é um token com par **Light/Dark**. Componentes consomem tokens (nunca 
 
 ### Caso especial: CTA theme-aware (`--cta`)
 
-O **CTA** (botão preenchido/sólido) é theme-aware via os tokens **`--cta-grad` / `--cta-solid` / `--cta-solid-h` / `--cta-ink`**. Os botões `.wf-btn.wf-fill` e `.wf-btn.wf-solid` consomem **`--cta`**, nunca `--roxo2` / `--roxo-bright` direto.
+O **CTA** (botão preenchido/sólido) é theme-aware via os tokens **`--cta-grad` / `--cta-solid` / `--cta-solid-h` / `--cta-ink`**. Os botões `.wf-btn.wf-fill` e `.wf-btn.wf-solid` consomem **`--cta`**, nunca `--primary` / `--primary-bright` direto.
 
 Diferente da maioria dos tokens (que só invertem Light/Dark), o CTA é **escurecido no tema CLARO** por acessibilidade de **contraste de componente** (WCAG 1.4.11):
 
@@ -63,7 +63,7 @@ btn.addEventListener('click',function(){
 
 > `color-scheme` em cada tema faz scrollbars/controles nativos acompanharem. No light, dourado/rosa como **texto** usam as variantes `-ink`.
 
-> **Acessibilidade em 2 níveis** (vale para os dois temas): **(1) texto ≥ 4.5:1** (AA); **(2) componente/botão vs fundo ≥ 3:1** (WCAG 1.4.11, Non-text Contrast). O CTA usa o violeta vívido `#9521FF`/`#8F23E7` no dark e `#7A1AD6` no light, ambos passando o **nível 2** contra o respectivo fundo. O botão dourado, quando usado no **light**, ganha `border:1px solid var(--gold-ink)` para passar o **nível 2** (a área dourada clara isolada não atinge 3:1 sozinha).
+> **Acessibilidade em 2 níveis** (vale para os dois temas): **(1) texto ≥ 4.5:1** (AA); **(2) componente/botão vs fundo ≥ 3:1** (WCAG 1.4.11, Non-text Contrast). O CTA usa o violeta vívido `#9521FF`/`#8F23E7` no dark e `#7A1AD6` no light, ambos passando o **nível 2** contra o respectivo fundo. O botão dourado, quando usado no **light**, ganha `border:1px solid var(--highlight-ink)` para passar o **nível 2** (a área dourada clara isolada não atinge 3:1 sozinha).
 
 ---
 
@@ -85,6 +85,6 @@ btn.addEventListener('click',function(){
 - [ ] No light, texto dourado/rosa usa `-ink` (contraste AA).
 - [ ] **Texto** ≥ 4.5:1 (AA): nível 1 de acessibilidade.
 - [ ] **CTA/componente vs fundo** ≥ 3:1 (WCAG 1.4.11) nos **dois temas** (nível 2); o CTA dark usa `#9521FF`/`#8F23E7` e o light usa `#7A1AD6`.
-- [ ] Botão dourado no **light** leva `border:1px solid var(--gold-ink)` para passar o nível 2.
-- [ ] CTA preenchido/sólido consome `--cta` (`--cta-grad`/`--cta-solid`/`--cta-solid-h`/`--cta-ink`), nunca `--roxo2`/`--roxo-bright` direto.
+- [ ] Botão dourado no **light** leva `border:1px solid var(--highlight-ink)` para passar o nível 2.
+- [ ] CTA preenchido/sólido consome `--cta` (`--cta-grad`/`--cta-solid`/`--cta-solid-h`/`--cta-ink`), nunca `--primary`/`--primary-bright` direto.
 - [ ] Testar nos dois temas (contraste de texto e de componente, e legibilidade).
